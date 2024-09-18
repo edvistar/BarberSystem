@@ -3,6 +3,14 @@ using Data.Services;
 using Data;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using API.Errores;
+using Utilities;
+using Data.Interfaces.IRepository;
+using Data.Repository;
+using BLL.Services.Interfaces;
+using BLL.Services;
+using Microsoft.AspNetCore.Identity;
 
 namespace API.Extensions
 {
@@ -42,9 +50,43 @@ namespace API.Extensions
             });
             var connectionString = config.GetConnectionString("DefaultConnection");
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
-            services.AddCors();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.WithOrigins("https://kairos.softallweb.co", "http://localhost:4200")
+                           .AllowAnyHeader()
+                           .AllowAnyMethod()
+                           .AllowCredentials(); // Permite credenciales con origen específico
+                });
+            });
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<ITokenService, TokenService>();
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = actionContext =>
+                {
+                    var errores = actionContext.ModelState
+                                  .Where(e => e.Value.Errors.Count > 0)
+                                  .SelectMany(x => x.Value.Errors)
+                                  .Select(x => x.ErrorMessage).ToArray();
+                    var errorResponse = new ApiValidationErrorResponse
+                    {
+                        Errores = errores
+                    };
+                    return new BadRequestObjectResult(errorResponse);
+                };
+            });
 
+            services.AddScoped<IUnitWork, UnitWork>();
+            services.AddAutoMapper(typeof(MappingProfile));
+
+            services.AddScoped<IChairService, ChairService>();
+            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IOrdenService, OrdenService>();
+
+            // Agregar SignalR
+            services.AddSignalR();
             return services;
         }
     }

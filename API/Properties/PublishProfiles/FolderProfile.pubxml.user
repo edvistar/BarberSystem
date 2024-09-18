@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\EDUARDO\source\repos\BarberSystem\API\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2024-09-15T01:54:04.0068882Z||;True|2024-09-14T20:37:29.1411638-05:00||;True|2024-09-13T10:22:45.8257543-05:00||;True|2024-09-13T09:35:05.5856317-05:00||;True|2024-09-13T09:08:57.3511846-05:00||;True|2024-09-13T08:59:35.6026946-05:00||;True|2024-09-13T08:53:01.5013911-05:00||;True|2024-09-13T08:46:38.7631213-05:00||;True|2024-09-11T09:10:03.3126946-05:00||;True|2024-09-10T16:08:59.3599617-05:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -1,12 +1,7 @@
 using API.Extensions;
-using Data;
-using Data.Interfaces;
-using Data.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using System.Text;
+using API.Hubs;
+using API.Middleware;
+using Data.Inicializador;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,22 +12,43 @@ builder.Services.AddControllers();
 builder.Services.AgregarServiceApplication(builder.Configuration);
 
 builder.Services.AgregarServiceIdentity(builder.Configuration);
+builder.Services.AddScoped<IDbInicializador, DbInicializador>();
 
 var app = builder.Build();
+// Configura el middleware de SignalR
+app.MapHub<OrdenHub>("/ordenHub");
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseStatusCodePagesWithReExecute("/errores/{0}");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseCors(x => x.AllowAnyOrigin()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod());
+app.UseCors("CorsPolicy");
+                  
 app.UseAuthentication();
 app.UseAuthorization();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+
+    try
+    {
+        var inicializador = services.GetRequiredService<IDbInicializador>();
+        inicializador.Inicializador();
+    }
+    catch (Exception ex)
+    {
+
+        var logger = loggerFactory.CreateLogger<Program>();
+        logger.LogError(ex, "Ocurrio un error al ejecutar la migracion");
+    }
+}
 app.MapControllers();
 
 app.Run();

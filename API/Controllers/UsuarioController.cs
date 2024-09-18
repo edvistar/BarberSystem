@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model.DTOs;
 using Model.Entities;
+using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using OfficeOpenXml;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -83,5 +87,92 @@ namespace API.Controllers
             return await _db.Usuarios.AnyAsync(x => x.UserName == username.ToLower());
         }
 
+        [HttpPost("upload")]
+        public async Task<IActionResult> Upload(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            var usuarios = new List<Usuario>();
+
+            using (var stream = new MemoryStream())
+            {
+                await file.CopyToAsync(stream);
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Establecer el contexto de la licencia
+                using (var package = new ExcelPackage(stream))
+                {
+                    var worksheet = package.Workbook.Worksheets.First();
+                    var rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++)
+                    {
+                        using var hmac = new HMACSHA512();
+                        var usuario = new Usuario
+                        {
+                            UserName = worksheet.Cells[row, 1].Value.ToString().Trim().ToLower(),
+                            PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(worksheet.Cells[row, 2].Value.ToString().Trim())),
+                            PasswordSalt = hmac.Key
+                        };
+                        usuarios.Add(usuario);
+                    }
+                }
+            }
+
+            _db.Usuarios.AddRange(usuarios);
+            await _db.SaveChangesAsync();
+
+            return Ok("File uploaded and data saved.");
+        }
+
+        [HttpPost("uploadtwo")]
+        public async Task<IActionResult> Uploadtwo(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest("No file uploaded.");
+
+            var usuarios = new List<Usuario>();
+            // Obtener la lista de nombres de usuario existentes en la base de datos
+            var existingUsernamesList = await _db.Usuarios.Select(u => u.UserName).ToListAsync();
+            var existingUsernames = new HashSet<string>(existingUsernamesList);
+
+            using (var stream = new MemoryStream())
+            {
+                await file.CopyToAsync(stream);
+
+                stream.Position = 0;
+                IWorkbook workbook = new XSSFWorkbook(stream);
+                ISheet sheet = workbook.GetSheetAt(0);
+                var rowCount = sheet.LastRowNum;
+
+                for (int row = 1; row <= rowCount; row++)
+                {
+                    IRow currentRow = sheet.GetRow(row);
+                    if (currentRow == null) continue;
+
+                    var username = currentRow.GetCell(0)?.ToString().Trim().ToLower();
+
+                    // Verificar si el nombre de usuario ya existe
+                    if (existingUsernames.Contains(username))
+                    {
+                        return BadRequest($"El nombre de usuario '{username}' ya está registrado.");
+                    }
+                    using var hmac = new HMACSHA512();
+                    var usuario = new Usuario
+                    {
+                        UserName = currentRow.GetCell(0).ToString().Trim().ToLower(),
+                        PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(currentRow.GetCell(1).ToString().Trim())),
+                        PasswordSalt = hmac.Key
+                    };
+                    usuarios.Add(usuario);
+                }
+            }
+
+            _db.Usuarios.AddRange(usuarios);
+            await _db.SaveChangesAsync();
+
+            return Ok("File uploaded and data saved.");
+        }
     }
+
 }
+
