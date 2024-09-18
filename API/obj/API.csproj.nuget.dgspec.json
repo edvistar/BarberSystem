@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\API\\API.csproj": {}
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\API\\API.csproj": {
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\API\\API.csproj",
+        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\API\\API.csproj",
         "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\API\\obj\\",
+        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,17 +34,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\BLL.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj"
               },
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj"
               },
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -114,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\BLL.csproj": {
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -144,14 +144,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj"
               },
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj"
               },
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -190,14 +190,14 @@
         }
       }
     },
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj": {
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Data\\obj\\",
+        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -220,8 +220,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj"
               }
             }
           }
@@ -290,14 +290,14 @@
         }
       }
     },
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj": {
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj",
+        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj",
         "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\obj\\",
+        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -362,14 +362,14 @@
         }
       }
     },
-    "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj",
+        "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\obj\\",
+        "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -392,8 +392,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj": {
-                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj"
+              "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj": {
+                "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj"
               }
             }
           }

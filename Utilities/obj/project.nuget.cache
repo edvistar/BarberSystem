@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Sh+VBKCRE4=",
+  "dgSpecHash": "mHXcGwL5Ubk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Utilities\\Utilities.csproj",
+  "projectFilePath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Utilities\\Utilities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\EDUARDO\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\EDUARDO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.8\\microsoft.aspnetcore.cryptography.internal.8.0.8.nupkg.sha512",

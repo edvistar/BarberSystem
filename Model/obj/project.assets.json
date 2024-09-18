@@ -822,11 +822,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\Models.csproj",
+      "projectPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\Models.csproj",
       "packagesPath": "C:\\Users\\EDUARDO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\aquiel resplado\\BarberSystem\\Model\\obj\\",
+      "outputPath": "C:\\Users\\EDUARDO\\source\\repos\\BarberSystem\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

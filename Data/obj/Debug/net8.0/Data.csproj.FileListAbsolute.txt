@@ -1,21 +1,3 @@
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.deps.json
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.runtimeconfig.json
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.dll
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.pdb
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Models.dll
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Models.pdb
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.sourcelink.json
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.Up2Date
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.dll
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\refint\Data.dll
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.pdb
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
-C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\ref\Data.dll
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
@@ -34,3 +16,21 @@ C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\Data.pdb
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\EDUARDO\Source\Repos\BarberSystem\Data\bin\Debug\net8.0\Data.deps.json
+C:\Users\EDUARDO\Source\Repos\BarberSystem\Data\bin\Debug\net8.0\Data.runtimeconfig.json
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.dll
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Data.pdb
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Models.dll
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\bin\Debug\net8.0\Models.pdb
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.sourcelink.json
+C:\Users\EDUARDO\Source\Repos\BarberSystem\Data\obj\Debug\net8.0\Data.csproj.Up2Date
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.dll
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\refint\Data.dll
+C:\Users\EDUARDO\source\repos\BarberSystem\Data\obj\Debug\net8.0\Data.pdb
+C:\Users\EDUARDO\Source\Repos\BarberSystem\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
+C:\Users\EDUARDO\Source\Repos\BarberSystem\Data\obj\Debug\net8.0\ref\Data.dll
