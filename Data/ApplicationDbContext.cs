@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Model.Entities;
 using Models.Entities;
@@ -11,15 +12,16 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    public class ApplicationDbContext : IdentityDbContext<AppUsuario>
+    public class ApplicationDbContext : IdentityDbContext<UsuarioAplicacion, RolAplicacion, int, IdentityUserClaim<int>
+                                        , RolUsuarioAplicacion, IdentityUserLogin<int>, IdentityRoleClaim<int>
+                                        , IdentityUserToken<int>>
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
 
-
+        public DbSet<UsuarioAplicacion> UsuarioAplicacions { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<AppUsuario> AppUsuario { get; set; }
         public DbSet<Chair> Chair { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Orden> Ordenes { get; set; }

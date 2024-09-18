@@ -12,6 +12,7 @@
           "Data": "1.0.0",
           "EPPlus": "7.2.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.6",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.Design": "8.0.6",
           "Models": "1.0.0",
           "NPOI": "2.7.1",
@@ -1157,6 +1158,7 @@
       },
       "Data/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
           "Models": "1.0.0",

@@ -60,7 +60,7 @@ namespace API.Extensions
                            .AllowCredentials(); // Permite credenciales con origen específico
                 });
             });
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+            
             services.AddScoped<ITokenService, TokenService>();
             services.Configure<ApiBehaviorOptions>(options =>
             {

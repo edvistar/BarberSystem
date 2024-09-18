@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Models.Entities
 {
-    public class AppUsuario : IdentityUser
+    public class RolAplicacion : IdentityRole<int>
     {
-        public string Name { get; set; }
+        public ICollection<RolUsuarioAplicacion> RolUsuarios { get; set; }
     }
 }

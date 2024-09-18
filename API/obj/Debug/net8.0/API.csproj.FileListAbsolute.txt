@@ -165,6 +165,13 @@ C:\Users\EDUARDO\source\repos\BarberSystem\API\obj\Debug\net8.0\refint\API.dll
 C:\Users\EDUARDO\source\repos\BarberSystem\API\obj\Debug\net8.0\API.pdb
 C:\Users\EDUARDO\source\repos\BarberSystem\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\EDUARDO\source\repos\BarberSystem\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.sourcelink.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\appsettings.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\API.exe
@@ -310,14 +317,6 @@ C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\Data.pdb
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\Models.pdb
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\bin\Debug\net8.0\Utilities.pdb
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.AssemblyInfo.cs
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\API.sourcelink.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\API\obj\Debug\net8.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props

@@ -18,6 +18,12 @@ C:\Users\EDUARDO\source\repos\BarberSystem\BLL\obj\Debug\net8.0\BLL.dll
 C:\Users\EDUARDO\source\repos\BarberSystem\BLL\obj\Debug\net8.0\refint\BLL.dll
 C:\Users\EDUARDO\source\repos\BarberSystem\BLL\obj\Debug\net8.0\BLL.pdb
 C:\Users\EDUARDO\source\repos\BarberSystem\BLL\obj\Debug\net8.0\ref\BLL.dll
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.sourcelink.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\BLL.deps.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\BLL.dll
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\BLL.pdb
@@ -27,12 +33,6 @@ C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\Data.pdb
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\Models.pdb
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\bin\Debug\net8.0\Utilities.pdb
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
-C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.sourcelink.json
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\BLL.dll
 C:\Users\EDUARDO\source\repos\aquiel resplado\BarberSystem\BLL\obj\Debug\net8.0\refint\BLL.dll
