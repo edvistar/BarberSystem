@@ -1,7 +1,9 @@
 ﻿using Data.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Model.Entities;
+using Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -14,19 +16,24 @@ namespace Data.Services
 {
     public class TokenService : ITokenService
     {
+        private readonly UserManager<UsuarioAplicacion> _userManager;
         private readonly SymmetricSecurityKey _key;
 
-        public TokenService(IConfiguration  config)
+        public TokenService(IConfiguration  config, UserManager<UsuarioAplicacion> userManage)
         {
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+            _userManager = userManage;
         }
 
-        public string CrearToken(Usuario usuario)
+        public async Task<string> CrearToken(UsuarioAplicacion usuario)
         {
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.NameId, usuario.UserName)
             };
+
+            var roles = await _userManager.GetRolesAsync(usuario);
+            claims.AddRange(roles.Select(rol => new Claim(ClaimTypes.Role, rol)));
             var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha512);
             var tokenDescriptor = new SecurityTokenDescriptor
             {

@@ -20,7 +20,7 @@ namespace Data
         {
         }
 
-        public DbSet<UsuarioAplicacion> UsuarioAplicacions { get; set; }
+        public DbSet<UsuarioAplicacion> UsuarioAplicacion { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Chair> Chair { get; set; }
         public DbSet<Service> Services { get; set; }

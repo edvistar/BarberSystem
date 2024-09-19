@@ -8,6 +8,6 @@ namespace Data.Inicializador
 {
     public interface IDbInicializador
     {
-        void Inicializador();
+        void Inicializar();
     }
 }

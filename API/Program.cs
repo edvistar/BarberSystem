@@ -40,7 +40,7 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var inicializador = services.GetRequiredService<IDbInicializador>();
-        inicializador.Inicializador();
+        inicializador.Inicializar();
     }
     catch (Exception ex)
     {
