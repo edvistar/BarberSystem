@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BLL.Services.Interfaces;
 using Data.Interfaces.IRepository;
+using Microsoft.EntityFrameworkCore;
 using Model.Entities;
 using Models.DTOs;
 using Models.Entities;
@@ -34,6 +35,7 @@ namespace BLL.Services
                 chairDb.Name = modeloDto.Name;
                 chairDb.Numero = modeloDto.Numero;
                 chairDb.Logo = modeloDto.Logo;
+                chairDb.Ocuped = modeloDto.Ocuped;
                 _unitWork.Chair.Actualizar(chairDb);
                 await _unitWork.Guardar();
             }
@@ -44,6 +46,22 @@ namespace BLL.Services
             }
         }
 
+        public async Task ActualizarEstado(ChairEstadoDto modeloDto)
+        {
+            // Buscar la silla por Id usando Entity Framework
+            var silla = await _unitWork.Chair.ObtenerPrimero(e => e.Id == modeloDto.Id);
+
+            if (silla != null)
+            {
+                // Actualizar solo el campo Ocuped
+                silla.Ocuped = modeloDto.Ocuped;
+
+                // Guardar los cambios en la base de datos
+                await _unitWork.Guardar();
+            }
+        }
+
+
         public async Task<ChairDto> Agregar(ChairDto modeloDto)
         {
             try
@@ -52,7 +70,9 @@ namespace BLL.Services
                 {
                     Name = modeloDto.Name,
                     Numero = modeloDto.Numero,
-                    Logo = modeloDto.Logo
+                    Logo = modeloDto.Logo,
+                    Ocuped = modeloDto.Ocuped
+
 
                     //FechaCreacion = DateTime.Now,
                     //FechaActualizacion = DateTime.Now
@@ -71,21 +91,21 @@ namespace BLL.Services
             }
         }
 
-        //public async Task<IEnumerable<ChairDto>> ObtenerActivos()
-        //{
-        //    try
-        //    {
+        public async Task<IEnumerable<ChairDto>> ObtenerEstado()
+        {
+            try
+            {
 
-        //        var lista = await _unitWork.Chair.ObtenerTodos(x => x.Estado == true,
-        //                    orderby: e => e.OrderBy(e => e.Name));
-        //        return _mapper.Map<IEnumerable<ChairDto>>(lista);
-        //    }
-        //    catch (Exception)
-        //    {
+                var lista = await _unitWork.Chair.ObtenerTodos(x => x.Ocuped == true,
+                            orderby: e => e.OrderBy(e => e.Name));
+                return _mapper.Map<IEnumerable<ChairDto>>(lista);
+            }
+            catch (Exception)
+            {
 
-        //        throw;
-        //    }
-        //}
+                throw;
+            }
+        }
 
         public async Task<IEnumerable<ChairDto>> ObtenerTodos()
         {

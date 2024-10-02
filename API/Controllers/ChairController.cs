@@ -75,6 +75,37 @@ namespace API.Controllers
             return Ok(_response);
         }
 
+        [HttpPatch("EditarEstado")]
+        public async Task<IActionResult> EditarEstado([FromBody] ChairEstadoDto modeloDto)
+        {
+            try
+            {
+                // Validar que el ID sea válido
+                if (modeloDto == null || modeloDto.Id <= 0)
+                {
+                    _response.IsExitoso = false;
+                    _response.Resultado = "Datos inválidos";
+                    _response.StatusCode = HttpStatusCode.BadRequest;
+                    return BadRequest(_response);
+                }
+
+                // Llamar al servicio para actualizar el estado de la silla
+                await _chairService.ActualizarEstado(modeloDto);
+
+                _response.IsExitoso = true;
+                _response.StatusCode = HttpStatusCode.NoContent;
+            }
+            catch (Exception ex)
+            {
+                _response.IsExitoso = false;
+                _response.Resultado = ex.Message;
+                _response.StatusCode = HttpStatusCode.BadRequest;
+            }
+
+            return Ok(_response);
+        }
+
+
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Eliminar(int id)
         {

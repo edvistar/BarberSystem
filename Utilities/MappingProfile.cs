@@ -9,7 +9,8 @@ namespace Utilities
         public MappingProfile() 
         {
             CreateMap<Chair,ChairDto>()
-                .ForMember(c => c.Name,m => m.MapFrom(m => m.Name));
+                .ForMember(c => c.Name,m => m.MapFrom(m => m.Name))
+                .ForMember(dest => dest.Ocuped, opt => opt.MapFrom(src => false)); ;
             CreateMap<Service, ServiceDto>()
                 .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
             CreateMap<Orden, OrdenDto>()

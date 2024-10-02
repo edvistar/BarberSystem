@@ -20,6 +20,16 @@ namespace Data.Repository
                 chairDb.Name = chair.Name;
                 chairDb.Numero = chair.Numero;
                 chairDb.Logo = chair.Logo;
+                chairDb.Ocuped = chair.Ocuped;
+            }
+        }
+
+        public void ActualizarEstado(Chair chair)
+        {
+            var chairDb = _db.Chair.FirstOrDefault(c => c.Id == chair.Id);
+            if (chairDb != null)
+            {
+                chairDb.Ocuped = chair.Ocuped;
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Model.Entities;
+using Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Data.Interfaces
 {
     public interface ITokenService
     {
-        string CrearToken(Usuario usuario);
+        Task<string> CrearToken(UsuarioAplicacion usuario);
     }
 }
