@@ -97,5 +97,90 @@ namespace BLL.Services
             await _unitWork.Guardar();
         }
 
+        public async Task AddServicesChair(int chairId, int serviceId)
+        {
+            try
+            {
+                var silla = await _unitWork.Chair.ObtenerPrimero(s => s.Id == chairId);
+                if (silla == null)
+                {
+                    throw new TaskCanceledException("La silla no existe.");
+                }
+
+                var servicio = await _unitWork.Service.ObtenerPrimero(s => s.Id == serviceId);
+                if (servicio == null)
+                {
+                    throw new TaskCanceledException("El servicio no existe.");
+                }
+
+                // Verificar si ya existe la relación entre silla y servicio
+                var chairserviceExistente = await _unitWork.ChairServices.ObtenerPrimero(ss => ss.ChairId == chairId && ss.ServiceId == serviceId);
+                if (chairserviceExistente != null)
+                {
+                    throw new TaskCanceledException("El servicio ya está asociado a esta silla.");
+                }
+
+                // Crear la relación Silla-Servicio
+                var nuevaRelacion = new ChairServices
+                {
+                    ChairId = chairId,
+                    ServiceId = serviceId
+                };
+
+                await _unitWork.ChairServices.Agregar(nuevaRelacion);
+                await _unitWork.Guardar();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task RemoveServiceFromChair(int chairId, int serviceId)
+        {
+            try
+            {
+                // Buscar la relación existente entre la silla y el servicio
+                var chairService = await _unitWork.ChairServices.ObtenerPrimero(ss => ss.ChairId == chairId && ss.ServiceId == serviceId);
+
+                // Verificar si la relación existe
+                if (chairService == null)
+                {
+                    throw new TaskCanceledException("La relación entre la silla y el servicio no existe.");
+                }
+
+                // Eliminar la relación
+                _unitWork.ChairServices.Remover(chairService);
+                await _unitWork.Guardar();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<IEnumerable<ServiceDto>> ObtenerServiciosPorSilla(int chairId)
+        {
+            try
+            {
+                // Obtener la relación de servicios con la silla
+                var chairServices = await _unitWork.ChairServices.ObtenerTodos(cs => cs.ChairId == chairId, incluirPropiedades: "Service");
+
+                // Verificar si hay servicios asociados
+                if (chairServices == null || !chairServices.Any())
+                {
+                    throw new TaskCanceledException("No hay servicios asociados a esta silla.");
+                }
+
+                // Mapear los servicios a DTO
+                var servicios = chairServices.Select(cs => cs.Service);
+                return _mapper.Map<IEnumerable<ServiceDto>>(servicios);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

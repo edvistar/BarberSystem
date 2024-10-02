@@ -26,6 +26,7 @@ namespace Data
         public DbSet<Service> Services { get; set; }
         public DbSet<Orden> Ordenes { get; set; }
         public DbSet<Especialidad> Especialidades { get; set; }
+        public DbSet<ChairServices> ChairServices { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

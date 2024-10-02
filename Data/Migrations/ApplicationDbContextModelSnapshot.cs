@@ -175,9 +175,35 @@ namespace Data.Migrations
                     b.Property<int>("Numero")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Ocuped")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.ToTable("Chair");
+                });
+
+            modelBuilder.Entity("Models.Entities.ChairServices", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChairId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChairId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("ChairServices");
                 });
 
             modelBuilder.Entity("Models.Entities.Orden", b =>
@@ -390,6 +416,25 @@ namespace Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Models.Entities.ChairServices", b =>
+                {
+                    b.HasOne("Models.Entities.Chair", "Chair")
+                        .WithMany()
+                        .HasForeignKey("ChairId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Models.Entities.Service", "Service")
+                        .WithMany()
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chair");
+
+                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("Models.Entities.RolUsuarioAplicacion", b =>

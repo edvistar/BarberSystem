@@ -13,6 +13,7 @@ namespace Data.Repository
         public IChairRepository Chair { get; private set; }
         public IServiceRepository Service { get; private set; }
         public IOrdenRepository Orden { get; private set; }
+        public IChairServicesRepository ChairServices { get; private set; }
 
         public UnitWork(ApplicationDbContext db)
         {
@@ -20,6 +21,7 @@ namespace Data.Repository
             Chair = new ChairRepository(db);
             Service = new ServiceRepository(db);
             Orden = new OrdenRepository(db);
+            ChairServices = new ChairServicesRepository(db);
         }
 
 

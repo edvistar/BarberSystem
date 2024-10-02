@@ -13,6 +13,7 @@ namespace BLL.Services.Interfaces
         //Task<IEnumerable<ChairDto>> ObtenerActivos();
         Task<ChairDto> Agregar(ChairDto modeloDto);
         Task Actualizar(ChairDto modeloDto);
+        Task ActualizarEstado(ChairEstadoDto modeloDto);
         Task Remover(int id);
     }
 }

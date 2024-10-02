@@ -59,6 +59,7 @@ namespace API.Extensions
                            .AllowAnyMethod()
                            .AllowCredentials(); // Permite credenciales con origen específico
                 });
+               
             });
             
             services.AddScoped<ITokenService, TokenService>();
