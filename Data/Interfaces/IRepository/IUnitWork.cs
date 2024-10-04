@@ -12,6 +12,7 @@ namespace Data.Interfaces.IRepository
         IServiceRepository Service { get; }
         IOrdenRepository Orden { get; }
         IChairServicesRepository ChairServices { get; }
+        IOrdenDetalleRepository OrdenDetalle { get; }
 
         Task Guardar();
     }
