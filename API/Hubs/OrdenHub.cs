@@ -8,8 +8,9 @@ namespace API.Hubs
         // Método para notificar a todos los clientes que una silla ha sido ocupada
         public async Task UpdateChairStatus(int chairId, bool ocuped, List<Service> services)
         {
+            var ocupedNumber = ocuped ? 1 : 0;
             // Difundir la actualización a todos los clientes conectados
-            await Clients.All.SendAsync("ReceiveChairUpdate", chairId, ocuped, services);
+            await Clients.All.SendAsync("ReceiveChairUpdate", chairId, ocupedNumber, services);
         }
 
         // Método para notificar a todos los clientes que se ha agregado un servicio a una silla
