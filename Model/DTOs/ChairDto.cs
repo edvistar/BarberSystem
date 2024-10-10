@@ -12,6 +12,6 @@ namespace Models.DTOs
         public string Name { get; set; }
         public int Numero { get; set; }
         public string Logo { get; set; }
-        public bool Ocuped { get; set; } = false;
+        public int Ocuped { get; set; }
     }
 }

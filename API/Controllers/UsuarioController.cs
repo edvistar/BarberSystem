@@ -1,4 +1,5 @@
-﻿using Data.Interfaces;
+﻿using BLL.Services.Interfaces;
+using Data.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,22 +18,37 @@ namespace API.Controllers
         private readonly ITokenService _tokenService;
         private ApiResponse _response;
         private readonly RoleManager<RolAplicacion> _rolManager;
+        private readonly IUsuarioService _usuarioService;
 
         public UsuarioController(UserManager<UsuarioAplicacion> userManager, ITokenService tokenService,
-            RoleManager<RolAplicacion> roleManager)
+            RoleManager<RolAplicacion> roleManager, IUsuarioService usuarioService)
         {
             _userManager = userManager;
             _tokenService = tokenService;
             _rolManager = roleManager;
             _response = new ApiResponse();
+            _usuarioService = usuarioService;
         }
 
-        [Authorize]
+       // [Authorize]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
+        public async Task<ActionResult<IEnumerable<UsuarioAplicacion>>> GetUsuarios()
         {
-            var usuarios = await _userManager.Users.ToListAsync();
-            return Ok(usuarios);
+            try
+            {
+                _response.Resultado = await _usuarioService.ObtenerTodos();
+                _response.IsExitoso = true;
+                _response.StatusCode = HttpStatusCode.OK;
+
+            }
+            catch (Exception ex)
+            {
+
+                _response.IsExitoso = false;
+                _response.Mensaje = ex.Message;
+                _response.StatusCode = HttpStatusCode.BadRequest;
+            }
+            return Ok(_response);
         }
 
         [Authorize]

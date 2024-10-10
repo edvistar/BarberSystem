@@ -8,9 +8,8 @@ namespace Utilities
     {
         public MappingProfile() 
         {
-            CreateMap<Chair,ChairDto>()
-                .ForMember(c => c.Name,m => m.MapFrom(m => m.Name))
-                .ForMember(dest => dest.Ocuped, opt => opt.MapFrom(src => false)); ;
+            CreateMap<Chair, ChairDto>()
+                .ForMember(dest => dest.Ocuped, opt => opt.MapFrom(src => src.Ocuped ? 1 : 0)); // Si es true, será 1
             CreateMap<Service, ServiceDto>()
                 .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
             CreateMap<Orden, OrdenDto>()

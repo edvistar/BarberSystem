@@ -1,5 +1,6 @@
 ﻿using BLL.Services;
 using BLL.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models.DTOs;
 using System.Net;
@@ -16,6 +17,7 @@ namespace API.Controllers
             _chairService = chairService;
             _response = new();
         }
+        //[Authorize]
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -36,6 +38,25 @@ namespace API.Controllers
             return Ok(_response);
         }
 
+        [HttpGet("GetEstado")]
+        public async Task<IActionResult> GetEstado()
+        {
+            try
+            {
+                _response.Resultado = await _chairService.ObtenerEstado();
+                _response.IsExitoso = true;
+                _response.StatusCode = HttpStatusCode.OK;
+
+            }
+            catch (Exception ex)
+            {
+
+                _response.IsExitoso = false;
+                _response.Mensaje = ex.Message;
+                _response.StatusCode = HttpStatusCode.BadRequest;
+            }
+            return Ok(_response);
+        }
 
         [HttpPost]
         public async Task<IActionResult> Crear(ChairDto modeloDto)

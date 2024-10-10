@@ -9,6 +9,6 @@ namespace Models.DTOs
     public class ChairEstadoDto
     {
         public int Id { get; set; }
-        public bool Ocuped { get; set; } = false;
+        public int Ocuped { get; set; }
     }
 }
