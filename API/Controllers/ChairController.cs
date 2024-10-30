@@ -101,20 +101,24 @@ namespace API.Controllers
         {
             try
             {
-                // Validar que el ID sea válido
-                if (modeloDto == null || modeloDto.Id <= 0)
-                {
-                    _response.IsExitoso = false;
-                    _response.Resultado = "Datos inválidos";
-                    _response.StatusCode = HttpStatusCode.BadRequest;
-                    return BadRequest(_response);
-                }
-
-                // Llamar al servicio para actualizar el estado de la silla
                 await _chairService.ActualizarEstado(modeloDto);
-
                 _response.IsExitoso = true;
                 _response.StatusCode = HttpStatusCode.NoContent;
+
+                // Validar que el ID sea válido
+                //if (modeloDto == null || modeloDto.Id <= 0)
+                //{
+                //    _response.IsExitoso = false;
+                //    _response.Resultado = "Datos inválidos";
+                //    _response.StatusCode = HttpStatusCode.BadRequest;
+                //    return BadRequest(_response);
+                //}
+
+                //// Llamar al servicio para actualizar el estado de la silla
+                //await _chairService.ActualizarEstado(modeloDto);
+
+                //_response.IsExitoso = true;
+                //_response.StatusCode = HttpStatusCode.NoContent;
             }
             catch (Exception ex)
             {

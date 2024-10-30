@@ -40,6 +40,7 @@ namespace Data.Inicializador
              _rolManager.CreateAsync(new RolAplicacion { Name = "Manicurista"}).GetAwaiter().GetResult();
              _rolManager.CreateAsync(new RolAplicacion { Name = "Barbero" }).GetAwaiter().GetResult();
              _rolManager.CreateAsync(new RolAplicacion { Name = "Estilista" }).GetAwaiter().GetResult();
+            _rolManager.CreateAsync(new RolAplicacion { Name = "Cliente" }).GetAwaiter().GetResult();
 
             //Crear Usuario Administrador
 
