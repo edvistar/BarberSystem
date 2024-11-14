@@ -1,4 +1,5 @@
-﻿using Models.DTOs;
+﻿using Model.DTOs;
+using Models.DTOs;
 using Models.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace BLL.Services.Interfaces
     {
         Task<IEnumerable<UsuarioAplicacion>> ObtenerTodos();
         Task<UsuarioAplicacion> Agregar(UsuarioAplicacion modeloDto);
-        Task Actualizar(UsuarioAplicacion modeloDto);
+        Task Actualizar(UsuarioUpdateDto modeloDto);
         Task Remover(int id);
     }
 }
