@@ -14,6 +14,9 @@ namespace Data.Interfaces.IRepository
         IChairServicesRepository ChairServices { get; }
         IOrdenDetalleRepository OrdenDetalle { get; }
         IUsuarioRepository Usuario { get; }
+        IProductRepository Product { get; }
+        IMarcaRepository Marca { get; }
+        ICategoryRepository Category { get; }
 
         Task Guardar();
     }

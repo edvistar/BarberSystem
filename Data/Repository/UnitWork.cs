@@ -16,6 +16,9 @@ namespace Data.Repository
         public IChairServicesRepository ChairServices { get; private set; }
         public IOrdenDetalleRepository OrdenDetalle { get; private set; }
         public IUsuarioRepository Usuario { get; private set; }
+        public IProductRepository Product { get; private set; }
+        public IMarcaRepository Marca { get; private set; }
+        public ICategoryRepository Category { get; private set; }
 
         public UnitWork(ApplicationDbContext db)
         {
@@ -26,6 +29,9 @@ namespace Data.Repository
             ChairServices = new ChairServicesRepository(db);
             OrdenDetalle= new OrdenDetalleRepository(db);
             Usuario = new UsuarioRepository(db);
+            Product = new ProductRepository(db);
+            Marca = new MarcaRepository(db);
+            Category = new CategoryRepository(db);
         }
 
 
