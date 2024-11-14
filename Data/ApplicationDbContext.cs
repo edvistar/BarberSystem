@@ -27,6 +27,9 @@ namespace Data
         public DbSet<Orden> Ordenes { get; set; }
         public DbSet<Especialidad> Especialidades { get; set; }
         public DbSet<ChairServices> ChairServices { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Marca> Marca { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

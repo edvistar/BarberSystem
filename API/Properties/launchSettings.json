@@ -4,12 +4,13 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
+      //"applicationUrl": "https://barberapi.softallweb.co",
       "applicationUrl": "http://localhost:26900",
       "sslPort": 0
     }
   },
   "profiles": {
-    "http": {
+    "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
