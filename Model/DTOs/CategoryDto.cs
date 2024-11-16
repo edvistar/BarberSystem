@@ -9,6 +9,7 @@ namespace Models.DTOs
 {
     public class CategoryDto
     {
+        public int Id { get; set; }
         [Display(Name = "Nombre de Categoria")]
         [Required(ErrorMessage = "El Nombre es Requerido")]
         [MaxLength(60, ErrorMessage = "El Nombre debe ser Máximo 60 Caracteres")]

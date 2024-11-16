@@ -11,7 +11,7 @@ namespace Models.DTOs
 {
     public class ProductDto
     {
-
+        public int Id { get; set; }
         [Required(ErrorMessage = "El Nombre es Requerido")]
         [Display(Name = "Nombre del producto")]
         public string Name { get; set; } = string.Empty;
