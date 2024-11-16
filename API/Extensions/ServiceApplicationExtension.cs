@@ -86,6 +86,9 @@ namespace API.Extensions
             services.AddScoped<IServiceService, ServiceService>();
             services.AddScoped<IOrdenService, OrdenService>();
             services.AddScoped<IUsuarioService, UsuarioService>();
+            services.AddScoped<IMarcaService, MarcaService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
 
             // Agregar SignalR
             services.AddSignalR();

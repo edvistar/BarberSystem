@@ -14,6 +14,12 @@ namespace Utilities
                 .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
             CreateMap<Orden, OrdenDto>()
                 .ForMember(c => c.Numero, m => m.MapFrom(m => m.Numero));
+            CreateMap<Marca, MarcaDto>()
+                .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
+            CreateMap<Category, CategoryDto>()
+                .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
+            CreateMap<Product, ProductDto>()
+                .ForMember(c => c.Name, m => m.MapFrom(m => m.Name));
 
         }
     }

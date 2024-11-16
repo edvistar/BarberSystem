@@ -9,6 +9,8 @@ namespace Models.DTOs
 {
     public class MarcaDto
     {
+        public int Id { get; set; }
+
         [Display(Name = "Nombre de Marca")]
         [Required(ErrorMessage = "El Nombre  es Requerido")]
         [MaxLength(60, ErrorMessage = "El Nombre debe ser Máximo 60 Caracteres")]
